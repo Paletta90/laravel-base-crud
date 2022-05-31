@@ -2,6 +2,8 @@
 
 @section('content')
 <table class="table table-striped table-bordered">
+    <a href="{{ route('comics.create') }}" type="button" class="btn btn-success mb-4">Add comic</a>
+
     @forelse ($comics as $comic)
     <thead>
         <tr>
@@ -12,6 +14,7 @@
             <th scope="col">Type</th>
             <th scope="col">Sale date</th>
             <th scope="col">Price</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +26,12 @@
             <td>{{$comic -> description }}</td>
             <td>{{$comic -> series }}</td>
             <td>{{$comic -> type }}</td>
-            <td>{{$comic -> sale_date }}</td>
-            <td>{{$comic -> price }} &#8364;</td>
+            <td width="100px">{{$comic -> sale_date }}</td>
+            <td width="100px">{{$comic -> price }} &#8364;</td>
+            <td>
+                <a href="{{ route('comics.show', $comic) }}" type="button" class="btn btn-primary" >View</a>
+
+            </td>
         </tr>
     </tbody>
     @empty
