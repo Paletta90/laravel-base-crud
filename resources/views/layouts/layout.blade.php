@@ -11,7 +11,16 @@
 
 <body>
 
-    <h1 class="text-primary">Titolo</h1>
+    {{-- Header --}}
+    <header>
+         @include('includes.header')
+    </header>
+
+
+    {{-- Main --}}
+    <main>
+        @yield('content')
+    </main>
 
     <script src=" {{ asset('js/app.js') }} "></script>
 </body>
