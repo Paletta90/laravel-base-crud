@@ -30,7 +30,7 @@
             <td width="100px">{{$comic -> price }} &#8364;</td>
             <td>
                 <a href="{{ route('comics.show', $comic) }}" type="button" class="btn btn-primary" >View</a>
-
+                <a href="{{ route('comics.edit', $comic) }}" type="button" class="btn btn-success" >Modify</a>
             </td>
         </tr>
     </tbody>
