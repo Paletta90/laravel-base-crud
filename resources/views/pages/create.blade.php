@@ -3,6 +3,9 @@
 @section('content')
 
 <div class="w-25 m-auto">
+
+    @include('includes.errors')
+
     <form action="{{ route('comics.store') }}" method="POST">
 
         @csrf

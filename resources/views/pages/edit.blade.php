@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="w-25 m-auto">
-    <form action="{{ route('comics.update', $comic) }}" method="POST">
+
+    @include('includes.errors')
+
+    <form action="{{ route('comics.update', $comic) }}" method="POST" novalidate>
 
         @method('PUT')
         @csrf
