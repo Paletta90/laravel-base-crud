@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@include('includes.message')
+
 <table class="table table-striped table-bordered">
     <a href="{{ route('comics.create') }}" type="button" class="btn btn-success mb-4">Add comic</a>
 

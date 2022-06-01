@@ -46,7 +46,7 @@ class ComicsController extends Controller
 
         $new_comic -> save();
 
-        return redirect() -> route('comics.show', $new_comic);
+        return redirect() -> route('comics.index') -> with('message', "Il fumetto $new_comic->title è stato creato con successo");
     }
 
     /**
@@ -85,7 +85,7 @@ class ComicsController extends Controller
         $data = $request -> all();
         $comic -> update($data);
 
-        return redirect() -> route('comics.index');
+        return redirect() -> route('comics.index') -> with('message', "Il fumetto $comic->title è stato aggiornato con successo");;
     }
 
     /**
@@ -98,6 +98,6 @@ class ComicsController extends Controller
     {
         $comic -> delete();
 
-        return redirect() -> route('comics.index');
+        return redirect() -> route('comics.index') -> with('message', "Il fumetto $comic->title è stato cancellato con successo");;
     }
 }
