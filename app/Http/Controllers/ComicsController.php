@@ -43,7 +43,6 @@ class ComicsController extends Controller
             [
                 'title' => 'required',
                 'price' => 'numeric',
-                'thumb' => 'URL',
                 'series' => 'alpha_dash'
             ]
         );
@@ -96,7 +95,6 @@ class ComicsController extends Controller
             [
                 'title' => 'required',
                 'price' => 'numeric',
-                'thumb' => 'URL',
                 'series' => 'alpha_dash'
             ]
         );

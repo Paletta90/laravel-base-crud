@@ -23,6 +23,9 @@
     </main>
 
     <script src=" {{ asset('js/app.js') }} "></script>
+
+    {{-- Script per conferma cancellazione --}}
+    @yield('delete-message')
 </body>
 
 </html>

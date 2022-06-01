@@ -37,7 +37,7 @@
                 {{-- Bottone per modificare --}}
                 <a href="{{ route('comics.edit', $comic) }}" type="button" class="btn btn-success mb-2" >Modify</a>
                 {{-- Bottone per cancellare--}}
-                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                <form action="{{ route('comics.destroy', $comic) }}" method="POST" data-name="{{ $comic->title }}" class="deleteForms">
 
                     @method('DELETE')
                     @csrf
@@ -52,4 +52,8 @@
     <h1 class="text-center my-3">Non ci sono fumetti presenti del database</h1>
     @endforelse
 </table>
+@endsection
+
+@section('delete-message')
+    <script src="{{ asset('js/deleteMessage.js') }}"></script>
 @endsection
