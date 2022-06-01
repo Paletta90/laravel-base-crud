@@ -17,27 +17,27 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <input type="text" class="form-control" name="description" value="{{ old('title', $comic->description) }}" required>
+            <input type="text" class="form-control" name="description" value="{{ old('description', $comic->description) }}" required>
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">Link immagine</label>
-            <input type="text" class="form-control" name="thumb" value="{{ old('title', $comic->thumb) }}" required>
+            <input type="text" class="form-control" name="thumb" value="{{ old('thumb', $comic->thumb) }}" required>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" name="price" value="{{ old('title', $comic->price) }}" required>
+            <input type="text" class="form-control" name="price" value="{{ old('price', $comic->price) }}" required>
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
-            <input type="text" class="form-control" name="series" value="{{ old('title', $comic->series) }}" required>
+            <input type="text" class="form-control" name="series" value="{{ old('series', $comic->series) }}" required>
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale date</label>
-            <input type="date" class="form-control" name="sale_date" value="{{ old('title', $comic->sale_date) }}" required>
+            <input type="date" class="form-control" name="sale_date" value="{{ old('sale_date', $comic->sale_date) }}" required>
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <input type="text" class="form-control" name="type" value="{{ old('title', $comic->type) }}" required>
+            <input type="text" class="form-control" name="type" value="{{ old('type', $comic->type) }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
